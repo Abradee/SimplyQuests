@@ -1,0 +1,30 @@
+active-season: "HALLOWEEN"
+
+quests:
+  mine_coal:
+    name: "Standard Miner"
+    type: "MINE"
+    target: "COAL_ORE"
+    amount: 15
+    season: "NONE"
+
+  kill_zombies:
+    name: "Undead Slayer"
+    type: "KILL"
+    target: "ZOMBIE"
+    amount: 10
+    season: "NONE"
+
+  halloween_spiders:
+    name: "Spooky Exterminator"
+    type: "KILL"
+    target: "SPIDER"
+    amount: 20
+    season: "HALLOWEEN"
+
+  winter_ice:
+    name: "Ice Harvester"
+    type: "MINE"
+    target: "ICE"
+    amount: 32
+    season: "WINTER"
