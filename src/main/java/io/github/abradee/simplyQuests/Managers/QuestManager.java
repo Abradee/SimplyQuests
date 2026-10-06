@@ -1,5 +1,8 @@
 package io.github.abradee.simplyQuests.Managers;
 
+import io.github.abradee.simplyQuests.Models.Quest;
+import io.github.abradee.simplyQuests.Models.QuestType;
+import io.github.abradee.simplyQuests.Models.Season;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.configuration.ConfigurationSection;
@@ -32,7 +35,6 @@ public class QuestManager {
 
         FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 
-        // Load active season
         String seasonStr = config.getString("active-season", "NONE").toUpperCase();
         try {
             this.activeSeason = Season.valueOf(seasonStr);
@@ -70,13 +72,10 @@ public class QuestManager {
         UUID uuid = player.getUniqueId();
 
         for (Quest quest : quests.values()) {
-            // Must match event type
             if (quest.type() != type) continue;
 
-            // Must be regular or belong to current active season
             if (quest.season() != Season.NONE && quest.season() != this.activeSeason) continue;
 
-            // Must match target (e.g. block name or mob name)
             if (!quest.target().equalsIgnoreCase(targetIdentifier)) continue;
 
             Map<String, Integer> userQuests = playerProgress.computeIfAbsent(uuid, k -> new HashMap<>());

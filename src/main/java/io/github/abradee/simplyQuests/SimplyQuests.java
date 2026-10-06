@@ -1,14 +1,26 @@
 package io.github.abradee.simplyQuests;
 
-import org.bukkit.plugin.java.JavaPlugin;
 import de.clickism.modrinthupdatechecker.ModrinthUpdateChecker;
+import io.github.abradee.simplyQuests.Listeners.QuestListener;
+import io.github.abradee.simplyQuests.Managers.QuestManager;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SimplyQuests extends JavaPlugin {
+
+    private QuestManager questManager;
 
     @Override
     public void onEnable() {
         getLogger().info("The plugin has started.");
         getLogger().info("Feel free to donate through https://patreon.com/abradee");
+
+        // Initialize Quest Manager (loads quests.yml)
+        this.questManager = new QuestManager(this);
+
+        // Register Listeners
+        getServer().getPluginManager().registerEvents(new QuestListener(questManager), this);
+
+        // Version check via Modrinth
         new ModrinthUpdateChecker("simplyquests", "paper", null)
                 .checkVersion(latestVersion -> {
                     String currentVersion = getDescription().getVersion();
@@ -32,6 +44,11 @@ public final class SimplyQuests extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        getLogger().info("The plugin has stopped.");
+        getLogger().info("Thanks for using SimplyQuests!");
+    }
+
+    public QuestManager getQuestManager() {
+        return questManager;
     }
 }
