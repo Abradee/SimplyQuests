@@ -27,7 +27,7 @@ public class QuestListener implements Listener {
     public void onEntityDeath(EntityDeathEvent event) {
         LivingEntity entity = event.getEntity();
         Player killer = entity.getKiller();
-        
+
         if (killer == null) return;
 
         String mobName = entity.getType().name();
