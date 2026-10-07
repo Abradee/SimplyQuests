@@ -1,0 +1,12 @@
+name: SimplyQuests
+description: $description
+prefix: SimplyQuests
+version: '1.0.0-SNAPSHOT'
+
+main: io.github.abradee.simplyQuests.SimplyQuests
+paper-plugin-loader: io.github.abradee.simplyQuests.SimplyQuestsLoader
+api-version: '26.2'
+load: POSTWORLD
+
+authors: [ abradee ]
+website: https://modrinth.com/plugin/SimplyQuests

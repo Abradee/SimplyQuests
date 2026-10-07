@@ -1,0 +1,7 @@
+io\github\abradee\simplyQuests\Models\Quest.class
+io\github\abradee\simplyQuests\Models\QuestType.class
+io\github\abradee\simplyQuests\SimplyQuests.class
+io\github\abradee\simplyQuests\SimplyQuestsLoader.class
+io\github\abradee\simplyQuests\Models\Season.class
+io\github\abradee\simplyQuests\Listeners\QuestListener.class
+io\github\abradee\simplyQuests\Managers\QuestManager.class
