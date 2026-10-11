@@ -6,7 +6,7 @@
 
     <groupId>io.github.abradee</groupId>
     <artifactId>SimplyQuests</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-BUILD-8</version>
     <packaging>jar</packaging>
 
     <name>SimplyQuests</name>
@@ -68,6 +68,11 @@
             <groupId>de.clickism</groupId>
             <artifactId>modrinth-update-checker</artifactId>
             <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
         </dependency>
     </dependencies>
 </project>

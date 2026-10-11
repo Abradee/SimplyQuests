@@ -1,12 +1,18 @@
 name: SimplyQuests
 description: $description
 prefix: SimplyQuests
-version: '1.0.0-SNAPSHOT'
+version: '1.0.0-BUILD-8'
 
 main: io.github.abradee.simplyQuests.SimplyQuests
 paper-plugin-loader: io.github.abradee.simplyQuests.SimplyQuestsLoader
 api-version: '26.2'
 load: POSTWORLD
+
+commands:
+  simplyquests:
+    description: SimplyQuests commands.
+    usage: /<command>
+    aliases: [quests, quest]
 
 authors: [ abradee ]
 website: https://modrinth.com/plugin/SimplyQuests

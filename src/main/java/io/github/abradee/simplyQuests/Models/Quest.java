@@ -8,6 +8,8 @@ public record Quest(
         String name,
         QuestType type,
         String target, // e.g., "DIAMOND_ORE" or "ZOMBIE"
+        String rewardType,
+        String reward,
         int requiredAmount,
         Season season
 ) {}

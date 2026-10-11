@@ -1,7 +1,13 @@
-io\github\abradee\simplyQuests\Models\Quest.class
-io\github\abradee\simplyQuests\Models\QuestType.class
+io\github\abradee\simplyQuests\Managers\DatabaseManager.class
 io\github\abradee\simplyQuests\SimplyQuests.class
 io\github\abradee\simplyQuests\SimplyQuestsLoader.class
-io\github\abradee\simplyQuests\Models\Season.class
-io\github\abradee\simplyQuests\Listeners\QuestListener.class
+io\github\abradee\simplyQuests\Commands\SubCommands\ListCommand.class
 io\github\abradee\simplyQuests\Managers\QuestManager.class
+io\github\abradee\simplyQuests\Listeners\PlayerConnectionListener.class
+io\github\abradee\simplyQuests\Models\Quest.class
+io\github\abradee\simplyQuests\Models\QuestType.class
+io\github\abradee\simplyQuests\Commands\SimplyQuestsCommand.class
+io\github\abradee\simplyQuests\Models\Season.class
+io\github\abradee\simplyQuests\Commands\SubCommands\ReloadCommand.class
+io\github\abradee\simplyQuests\Commands\SubCommand.class
+io\github\abradee\simplyQuests\Listeners\QuestListener.class

@@ -1,4 +1,10 @@
-active-season: "HALLOWEEN"
+# Reward types are simple, just do either key, money, or item
+# Quest types are also simple, either MINE, KILL, or ACQUIRE
+# Possible target types change based on the quest type. For example, if the quest type is MINE, target must be a block type.
+# If you apply a season to a quest, it only can be done during that season. (seasons do not automatically change)
+# Key tiers: common -> prime -> crimson -> gold -> quasar
+
+season: "HALLOWEEN"
 
 quests:
   mine_coal:
@@ -6,6 +12,8 @@ quests:
     type: "MINE"
     target: "COAL_ORE"
     amount: 15
+    rewardtype: "money"
+    reward: "500"
     season: "NONE"
 
   kill_zombies:
@@ -13,18 +21,252 @@ quests:
     type: "KILL"
     target: "ZOMBIE"
     amount: 10
+    rewardtype: "key"
+    reward: "common"
     season: "NONE"
 
-  halloween_spiders:
-    name: "Spooky Exterminator"
+  dirt_collector:
+    name: "Dirt Collector"
+    type: "ACQUIRE"
+    target: "DIRT"
+    amount: 32
+    rewardtype: "item"
+    reward: "GRASS_BLOCK"
+    season: "NONE"
+
+  creeper_hater:
+    name: "Professional Creeper Hater"
     type: "KILL"
-    target: "SPIDER"
-    amount: 20
+    target: "CREEPER"
+    amount: 100
+    rewardtype: "key"
+    reward: "prime"
+    season: "NONE"
+
+  diamond_miner:
+    name: "Diamond Miner"
+    type: "MINE"
+    target: "DIAMOND_ORE"
+    amount: 128
+    rewardtype: "key"
+    reward: "gold"
+    season: "NONE"
+
+  gladiator:
+    name: "Gladiator"
+    type: "KILL"
+    target: "PLAYER"
+    amount: 10
+    rewardtype: "key"
+    reward: "gold"
+    season: "NONE"
+
+  wither_fighter:
+    name: "Wither Fighter"
+    type: "KILL"
+    target: "WITHER"
+    amount: 1
+    rewardtype: "key"
+    reward: "gold"
+    season: "NONE"
+
+  wingman:
+    name: "Wingman"
+    type: "ACQUIRE"
+    target: "ELYTRA"
+    amount: 1
+    rewardtype: "money"
+    reward: "25000"
+    season: "NONE"
+
+  netherite_collector:
+    name: "Netherite Collector"
+    type: "ACQUIRE"
+    target: "ANCIENT_DEBRIS"
+    amount: 64
+    rewardtype: "item"
+    reward: "NETHERITE_INGOT"
+    season: "NONE"
+
+  become_notch:
+    name: "Become Notch"
+    type: "ACQUIRE"
+    target: "ENCHANTED_GOLDEN_APPLE"
+    amount: 1
+    rewardtype: "key"
+    reward: "quasar"
+    season: "NONE"
+
+  totem_collector:
+    name: "Totem Collector"
+    type: "ACQUIRE"
+    target: "TOTEM_OF_UNDYING"
+    amount: 128
+    rewardtype: "key"
+    reward: "quasar"
+    season: "NONE"
+
+  what:
+    name: "What"
+    type: "ACQUIRE"
+    target: "DRAGON_EGG"
+    amount: 1
+    rewardtype: "key"
+    reward: "quasar"
+    season: "NONE"
+
+  # ==========================================
+  # HALLOWEEN QUESTS
+  # ==========================================
+  halloween_pumpkins:
+    name: "Pumpkin Harvester"
+    type: "ACQUIRE"
+    target: "PUMPKIN"
+    amount: 128
+    rewardtype: "money"
+    reward: "1500"
     season: "HALLOWEEN"
 
-  winter_ice:
-    name: "Ice Harvester"
+  halloween_phantoms:
+    name: "Nightmare Hunter"
+    type: "KILL"
+    target: "PHANTOM"
+    amount: 15
+    rewardtype: "key"
+    reward: "prime"
+    season: "HALLOWEEN"
+
+  halloween_witches:
+    name: "Witch Hunt"
+    type: "KILL"
+    target: "WITCH"
+    amount: 10
+    rewardtype: "key"
+    reward: "crimson"
+    season: "HALLOWEEN"
+
+  halloween_soulsand:
+    name: "Valley of Souls"
     type: "MINE"
-    target: "ICE"
-    amount: 32
+    target: "SOUL_SAND"
+    amount: 256
+    rewardtype: "money"
+    reward: "3500"
+    season: "HALLOWEEN"
+
+  # ==========================================
+  # WINTER QUESTS
+  # ==========================================
+  winter_strays:
+    name: "Frostbite Slayer"
+    type: "KILL"
+    target: "STRAY"
+    amount: 25
+    rewardtype: "key"
+    reward: "prime"
     season: "WINTER"
+
+  winter_snow:
+    name: "Snowbound Excavator"
+    type: "MINE"
+    target: "SNOW_BLOCK"
+    amount: 512
+    rewardtype: "money"
+    reward: "2000"
+    season: "WINTER"
+
+  winter_blue_ice:
+    name: "Deep Freeze"
+    type: "MINE"
+    target: "BLUE_ICE"
+    amount: 64
+    rewardtype: "key"
+    reward: "gold"
+    season: "WINTER"
+
+  winter_cookies:
+    name: "Holiday Baker"
+    type: "ACQUIRE"
+    target: "COOKIE"
+    amount: 128
+    rewardtype: "money"
+    reward: "1200"
+    season: "WINTER"
+
+  # ==========================================
+  # SPRING QUESTS
+  # ==========================================
+  spring_honey:
+    name: "Beekeeper"
+    type: "ACQUIRE"
+    target: "HONEY_BOTTLE"
+    amount: 32
+    rewardtype: "key"
+    reward: "prime"
+    season: "SPRING"
+
+  spring_slime:
+    name: "Springtime Bouncer"
+    type: "KILL"
+    target: "SLIME"
+    amount: 40
+    rewardtype: "money"
+    reward: "2500"
+    season: "SPRING"
+
+  spring_cherry:
+    name: "Cherry Blossom Craze"
+    type: "MINE"
+    target: "CHERRY_LOG"
+    amount: 192
+    rewardtype: "money"
+    reward: "3000"
+    season: "SPRING"
+
+  spring_emerald:
+    name: "Lucky Sprout"
+    type: "MINE"
+    target: "EMERALD_ORE"
+    amount: 16
+    rewardtype: "key"
+    reward: "gold"
+    season: "SPRING"
+
+  # ==========================================
+  # SUMMER QUESTS
+  # ==========================================
+  summer_sand:
+    name: "Dune Stripper"
+    type: "MINE"
+    target: "SAND"
+    amount: 512
+    rewardtype: "money"
+    reward: "2500"
+    season: "SUMMER"
+
+  summer_guardians:
+    name: "Ocean Raider"
+    type: "KILL"
+    target: "GUARDIAN"
+    amount: 30
+    rewardtype: "key"
+    reward: "crimson"
+    season: "SUMMER"
+
+  summer_blazes:
+    name: "Heatwave Exterminator"
+    type: "KILL"
+    target: "BLAZE"
+    amount: 50
+    rewardtype: "key"
+    reward: "gold"
+    season: "SUMMER"
+
+  summer_shells:
+    name: "Beachcomber"
+    type: "ACQUIRE"
+    target: "NAUTILUS_SHELL"
+    amount: 8
+    rewardtype: "key"
+    reward: "quasar"
+    season: "SUMMER"
