@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class QuestListener implements Listener {
 
@@ -32,5 +34,15 @@ public class QuestListener implements Listener {
 
         String mobName = entity.getType().name();
         questManager.handleProgress(killer, QuestType.KILL, mobName);
+    }
+
+    @EventHandler
+    public void onItemAcquire(EntityPickupItemEvent event) {
+        if (!(event.getEntity() instanceof Player player)) {
+            return;
+        }
+        ItemStack item = event.getItem().getItemStack();
+        String itemName = item.getType().name();
+        questManager.handleProgress(player, QuestType.ACQUIRE, itemName);
     }
 }
