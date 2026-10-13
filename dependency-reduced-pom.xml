@@ -4,7 +4,7 @@
   <groupId>io.github.abradee</groupId>
   <artifactId>SimplyQuests</artifactId>
   <name>SimplyQuests</name>
-  <version>1.0.0-BUILD-8</version>
+  <version>1.0.0</version>
   <build>
     <defaultGoal>clean package</defaultGoal>
     <resources>

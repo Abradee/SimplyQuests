@@ -1,7 +1,7 @@
 name: SimplyQuests
 description: $description
 prefix: SimplyQuests
-version: '1.0.0-BUILD-8'
+version: '1.0.0'
 
 main: io.github.abradee.simplyQuests.SimplyQuests
 paper-plugin-loader: io.github.abradee.simplyQuests.SimplyQuestsLoader
